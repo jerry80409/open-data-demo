@@ -32,7 +32,6 @@
 
 ### [Call current weather data for several cities](https://github.com/jerry80409/open-data-demo/wiki/Call-5-day---3-hour-forecast-data)
 
-TODO
-### [Bulk downloading]()
+### Not yet [Bulk downloading]()
 
 
