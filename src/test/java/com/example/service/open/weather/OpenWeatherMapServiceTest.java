@@ -41,7 +41,7 @@ public class OpenWeatherMapServiceTest {
     @Test
     public void testCurrentWeatherByGeographicCoordinates() throws IOException {
         Response<OpenWeatherResponse> response =
-                openWeatherMapService.currentWeatherByGeographicCoordinates("35", "139").execute();
+                openWeatherMapService.currentWeatherByGeographicCoordinates("25.05", "121.53").execute();
         System.out.println(response.body());
         Assert.assertEquals(200, response.code());
     }
