@@ -1,4 +1,4 @@
-package com.example.services.open.weather.entities;
+package com.example.services.open.weather.entities.forecast.weather;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,13 +10,10 @@ import lombok.Data;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "lon",
-        "lat"
+        "population"
 })
 @Data
-public class Coord {
-    @JsonProperty("lon")
-    private Double lon;
-    @JsonProperty("lat")
-    private Double lat;
+public class CitySys {
+    @JsonProperty("population")
+    private Integer population;
 }

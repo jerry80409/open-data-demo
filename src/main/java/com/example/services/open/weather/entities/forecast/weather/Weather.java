@@ -1,4 +1,4 @@
-package com.example.services.open.weather.entities;
+package com.example.services.open.weather.entities.forecast.weather;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

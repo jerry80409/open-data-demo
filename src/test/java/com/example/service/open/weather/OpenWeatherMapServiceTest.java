@@ -1,7 +1,8 @@
 package com.example.service.open.weather;
 
 import com.example.services.open.weather.OpenWeatherMapService;
-import com.example.services.open.weather.entities.OpenWeatherResponse;
+import com.example.services.open.weather.entities.current.weather.CurrentWeatherResponse;
+import com.example.services.open.weather.entities.forecast.weather.ForecastWeatherResponse;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,7 +25,7 @@ public class OpenWeatherMapServiceTest {
 
     @Test
     public void testCurrentWeatherByCityName() throws IOException {
-        Response<OpenWeatherResponse> response =
+        Response<CurrentWeatherResponse> response =
                 openWeatherMapService.currentWeatherByCityName("Taipei").execute();
         System.out.println(response.body());
         Assert.assertEquals(200, response.code());
@@ -32,7 +33,7 @@ public class OpenWeatherMapServiceTest {
 
     @Test
     public void testCurrentWeatherByCityId() throws IOException {
-        Response<OpenWeatherResponse> response =
+        Response<CurrentWeatherResponse> response =
                 openWeatherMapService.currentWeatherByCityId("1668341").execute();
         System.out.println(response.body());
         Assert.assertEquals(200, response.code());
@@ -40,8 +41,48 @@ public class OpenWeatherMapServiceTest {
 
     @Test
     public void testCurrentWeatherByGeographicCoordinates() throws IOException {
-        Response<OpenWeatherResponse> response =
+        Response<CurrentWeatherResponse> response =
                 openWeatherMapService.currentWeatherByGeographicCoordinates("25.05", "121.53").execute();
+        System.out.println(response.body());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void testCurrentWeatherByZipCode() throws IOException {
+        Response<CurrentWeatherResponse> response =
+                openWeatherMapService.currentWeatherByZipCode("94040,us").execute();
+        System.out.println(response.body());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void testCurrentWeatherBySeveralCityIds() throws IOException {
+        Response<CurrentWeatherResponse> response =
+                openWeatherMapService.currentWeatherBySeveralCityIds("524901,703448,2643743").execute();
+        System.out.println(response.body());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void testForecastFiveDaysWeatherByCityName() throws IOException {
+        Response<ForecastWeatherResponse> response =
+                openWeatherMapService.forecastFiveDaysWeatherByCityName("Taipei").execute();
+        System.out.println(response.body());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void testForecastFiveDaysWeatherByCityId() throws IOException {
+        Response<ForecastWeatherResponse> response =
+                openWeatherMapService.forecastFiveDaysWeatherByCityId("1668341").execute();
+        System.out.println(response.body());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void testForecastFiveDaysWeatherByGeographicCoordinates() throws IOException {
+        Response<ForecastWeatherResponse> response =
+                openWeatherMapService.forecastFiveDaysWeatherByGeographicCoordinates("25.05", "121.53").execute();
         System.out.println(response.body());
         Assert.assertEquals(200, response.code());
     }

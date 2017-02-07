@@ -1,4 +1,4 @@
-package com.example.services.open.weather.entities;
+package com.example.services.open.weather.entities.current.weather;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,7 +26,7 @@ import java.util.List;
         "cod"
 })
 @Data
-public class OpenWeatherResponse {
+public class CurrentWeatherResponse {
 
     @JsonProperty("coord")
     private Coord coord;
