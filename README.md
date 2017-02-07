@@ -4,8 +4,8 @@
 
 ## 免費版
 * 每分鐘 60 Requests
+* 支援 當天的天氣資料
 * 支援 5 天的天氣預測 (每三小時更新一次)
-* 支援 16 天的天氣預測 (每天更新一次)
 * Weather maps API
 * [License For Map, API] 使用 CC BY-SA 4.0 授權 (https://creativecommons.org/licenses/by-sa/4.0/)
 * [License For Data] 使用 ODbL 授權 (http://opendatacommons.org/licenses/odbl/)
