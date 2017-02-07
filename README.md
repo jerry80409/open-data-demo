@@ -28,8 +28,11 @@
 "cod":200}
 ```
 
-### Current Weather Data for One Location
-### Call current weather data for several cities
-### Bulk downloading
+### [Current Weather Data for One Location](https://github.com/jerry80409/open-data-demo/wiki/Call-current-weather-data-for-one-location)
+
+### [Call current weather data for several cities](https://github.com/jerry80409/open-data-demo/wiki/Call-5-day---3-hour-forecast-data)
+
+TODO
+### [Bulk downloading]()
 
 
