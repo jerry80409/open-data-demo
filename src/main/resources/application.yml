@@ -1,0 +1,11 @@
+# Spring 設定
+server:
+    port: 8080
+
+spring:
+    application:
+        name: open-data-demo
+
+open:
+    weather:
+        key: api-key
