@@ -1,6 +1,5 @@
-package com.example.service.open.weather;
+package com.example.services.open.weather;
 
-import com.example.services.open.weather.OpenWeatherMapService;
 import com.example.services.open.weather.entities.current.weather.CurrentWeatherResponse;
 import com.example.services.open.weather.entities.forecast.weather.ForecastWeatherResponse;
 import org.junit.Assert;
