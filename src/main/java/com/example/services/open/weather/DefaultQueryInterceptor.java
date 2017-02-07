@@ -12,8 +12,8 @@ import java.io.IOException;
  */
 public class DefaultQueryInterceptor implements Interceptor {
     // TODO: 2017/2/7 Consider to application.properties
-    private final String units = "metric";
-    private final String lang = "zh-tw";
+    private final String metric = "metric";
+    private final String zhTw = "zh-tw";
     private String apiKey;
 
     public DefaultQueryInterceptor(String key) {
@@ -32,8 +32,8 @@ public class DefaultQueryInterceptor implements Interceptor {
         HttpUrl keyQuery = chain.request().url()
                 .newBuilder()
                 .addQueryParameter("appid", this.apiKey)
-                .addQueryParameter("units", units)
-                .addQueryParameter("lang", lang)
+                .addQueryParameter("units", metric)
+                .addQueryParameter("lang", zhTw)
                 .build();
         Request request = chain.request().newBuilder().url(keyQuery).build();
         return chain.proceed(request);
